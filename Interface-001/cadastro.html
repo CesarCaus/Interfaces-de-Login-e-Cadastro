@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section id="container">
+
+        <form id="formulario" onsubmit="return enviarDados()">
+
+            <div id="lateral-esquerda">
+                <h1>Faça o seu cadastro</h1>
+                <a href="login.html">Já tenho uma conta</a>
+                <h4>Formulário criado apenas para fins de estudo</h4>
+                <img src="imagens/imagem-cadastro.png">
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="nome-usuario">Nome Completo</label>
+                            <input id="nome-usuario" name="nome-usuario" type="text">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="email-usuario">E-mail</label>
+                            <label class="erro" id="email-existente">(E-mail já utilizado)</label><br>
+                            <input id="email-usuario" name="email-usuario" type="email">
+                        </div>
+                        <div class="item">
+                            <label for="telefone-usuario">Celular</label>
+                            <label class="erro" id="telefone-existente">(Número já utilizado)</label><br>
+                            <input id="telefone-usuario" name="telefone-usuario" type="tel" maxlength="11">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="data-nascimento">Data de nascimento</label>
+                            <input id="data-nascimento" name="data-nascimento" type="date">
+                        </div>
+                        <div class="item">
+                            <label id="label-idade" for="idade-usuario">Idade</label><br>
+                            <input id="idade-usuario" name="idade-usuario" type="text"><br>
+                        </div>
+                        <div class="item">
+                            <label id="label-genero" for="genero-usuario">Gênero</label><br>
+                            <select id="genero-usuario" name="genero-usuario">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="none">Nenhuma das opções</option>
+                                <option value="nao-informado">Prefiro não informar</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações de login</legend>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="login-usuario">Nome de usuário</label>
+                            <label class="erro" id="erro-caractere">(Caracteres inválidos)</label>
+                            <label class="erro" id="usuario-existente">(Caracteres inválidos)</label><br>
+                            <input id="login-usuario" name="login-usuario" type="text">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="senha-usuario">Senha</label><br>
+                            <input id="senha-usuario" name="senha-usuario" type="password">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="item">
+                            <label for="senha-usuario">Digite a senha novamente</label>
+                            <label class="erro" id="erro-senha">(As senhas não correspondem)</label><br>
+                            <input id="senha-usuario" name="senha-usuario-2" type="password">
+                        </div>
+                    </div>
+                    <label class="erro" id="inputs-vazios">Preencha todos os campos</label>
+                    <div class="linha">
+                        <input id="botao-enviar" type="submit" value="Enviar">
+                    </div>
+                </fieldset>
+            </div>
+            <div id="sucesso">
+                <h2>Usuário cadastrado com sucesso</h2>
+                <img src="imagens/validacao.png">
+            </div>
+
+
+        </form>
+    </section>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

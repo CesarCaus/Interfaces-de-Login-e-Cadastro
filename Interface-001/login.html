@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<section id="container">
+    
+    <form id="formulario" onsubmit="return logar()">
+
+       <div id="lateral-esquerda">
+            <h1>Faça o Login</h1>
+            <a href="cadastro.html">Faça seu cadastro</a>
+            <h4>Formulário criado apenas para fins de estudo</h4>
+            <img src="imagens/imagem-cadastro.png">
+       </div>
+
+        <fieldset><legend>Login</legend>
+            <div class="linha">
+                <div class="item">
+                    <label for="login-usuario">Nome de usuário</label>
+                    <label class="erro" id="erro-caractere">(Caracteres inválidos)</label>
+                    <label class="erro" id="usuario-nao-existente">(Usuário não existe)</label><br>   
+                    <input id="login-usuario" name="login-usuario" type="text">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="item">
+                    <label for="senha-usuario">Senha</label>
+                    <label class="erro" id="erro-senha-login">(Senha invalida)</label><br>
+                    <input id="senha-usuario" name="senha-login" type="password">
+                </div>
+            </div>
+
+            <label class="erro" id="inputs-vazios">Preencha todos os campos</label>
+            <div class="linha">
+                <input id="botao-enviar" type="submit" value="Enviar">
+            </div>
+        </fieldset>
+       <div id="sucesso">
+            <h2>Login com sucesso</h2>
+            <img src="imagens/validacao.png">
+        </div>
+
+    </form>
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
